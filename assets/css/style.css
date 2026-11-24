@@ -76,3 +76,23 @@ body {
 .footer .link a:hover {
   color: #0d6efd;
 }
+
+/* dapspruts */
+
+.mapel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.25rem;
+  color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Pemisah info kontak */
+.hr-dotted {
+  border-top: 1px dotted;
+  opacity: 0.25;
+}
