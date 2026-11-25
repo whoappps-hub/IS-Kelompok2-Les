@@ -76,3 +76,17 @@ body {
 .footer .link a:hover {
   color: #0d6efd;
 }
+
+/* prida*/
+
+.feature-icon-1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 10px 24px rgba(255, 107, 53, 0.3);
+}
