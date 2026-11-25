@@ -1,47 +1,142 @@
-body {
-  font-family: Raleway, sans-serif;
-  background: #f6f8fd;
+:root {
+  --goles-bg: #faf6f0;
+  --goles-primary: #ff6b35;
+  --goles-primary-hover: #e85a24;
+  --goles-heading: #1b1b2f;
+  --goles-text: #5c5c6b;
+  --goles-card: #ffffff;
+  --goles-shadow: 0 12px 30px rgba(27, 27, 47, 0.08);
+  --goles-shadow-hover: 0 18px 40px rgba(27, 27, 47, 0.14);
 }
 
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--goles-bg);
+  color: var(--goles-text);
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--goles-heading);
+}
+
+/* Override Bootstrap primary → oranye */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--goles-primary);
+  --bs-btn-border-color: var(--goles-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--goles-primary-hover);
+  --bs-btn-hover-border-color: var(--goles-primary-hover);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--goles-primary-hover);
+  --bs-btn-active-border-color: var(--goles-primary-hover);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--goles-primary);
+  --bs-btn-disabled-border-color: var(--goles-primary);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--goles-primary);
+  --bs-btn-border-color: var(--goles-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--goles-primary);
+  --bs-btn-hover-border-color: var(--goles-primary);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--goles-primary-hover);
+  --bs-btn-active-border-color: var(--goles-primary-hover);
+  --bs-btn-disabled-color: var(--goles-primary);
+  --bs-btn-disabled-border-color: var(--goles-primary);
+}
+
+.bg-primary {
+  background-color: var(--goles-primary) !important;
+}
+
+.text-primary {
+  color: var(--goles-primary) !important;
+}
+
+a {
+  color: var(--goles-primary);
+}
+
+a:hover {
+  color: var(--goles-primary-hover);
+}
+
+/* Tombol pill */
+.btn.rounded-pill {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn.rounded-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 107, 53, 0.28);
+}
+
+.btn.rounded-pill:active {
+  transform: translateY(0);
+}
+
+/* Navbar */
 .bg-nav {
-  background-color: #f6f8fd;
+  background-color: var(--goles-bg);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar-brand .text-body {
+  color: var(--goles-heading) !important;
+  font-weight: 800 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--goles-heading) !important;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--goles-primary) !important;
 }
 
 .mt--2 {
   margin-top: -0.5rem !important;
 }
 
-.hr-dotted {
-  border-top: 1px dotted;
-  opacity: .25;
+.lead {
+  color: var(--goles-text);
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: #212529 !important;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.4s;
+/* Section heading */
+h3.fw-bold,
+h4.fw-bold {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--goles-heading);
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #0d6efd !important;
-}
-
-.feature-icon-1 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  color: #fff;
-  border-radius: 100%;
-}
-
+/* Tombol sosmed */
 .btn-social-media {
-  color: #31316a;
-  background-color: #cdcfdf;
-  border-color: #cdcfdf;
+  color: var(--goles-heading);
+  background-color: #f0e9df;
+  border-color: #f0e9df;
   width: 2rem;
   height: 2rem;
   padding: 1.2rem;
@@ -50,31 +145,65 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+  transition: all 0.3s ease;
 }
 
 .btn-social-media:hover {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--goles-primary);
+  border-color: var(--goles-primary);
+  transform: translateY(-2px);
+}
+
+/* Card */
+.card,
+.card.shadow-sm {
+  background-color: var(--goles-card);
+  box-shadow: var(--goles-shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card.shadow-sm:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--goles-shadow-hover) !important;
+}
+
+.card .fw-semibold,
+.card h3 {
+  color: var(--goles-heading);
+}
+
+.card .text-muted {
+  color: var(--goles-text) !important;
 }
 
 /* Footer */
+.footer {
+  background-color: #fff;
+}
+
 .footer .copyright a {
-  color: #ee5050;
+  color: var(--goles-primary);
   text-decoration: none;
 }
 
 .footer .copyright a:hover {
-  color: #eb2d2d;
+  color: var(--goles-primary-hover);
 }
 
 .footer .link a {
-  color: #212529;
+  color: var(--goles-heading);
   text-decoration: none;
 }
 
 .footer .link a:hover {
-  color: #0d6efd;
+  color: var(--goles-primary);
+}
+
+/* Gulir 1 halaman (index.html) */
+html {
+  scroll-behavior: smooth;
 }
 
 /*khoirunnisa*/
